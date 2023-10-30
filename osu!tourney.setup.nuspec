@@ -1,11 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>osu_tourney_setup</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-</Project>
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>osu_tourney_setup</id>
+        <version>0.0.0</version>
+        <title>osu!tourney setup</title>
+        <description>osu!tourney setups, made easier</description>
+        <authors>MiloTilo Services, BV.</authors>
+        <owners>MiloTilo</owners>
+        <projectUrl>https://milotilo.ddns.net/osu/projects/</projectUrl>
+        <language>en-NL</language>
+    </metadata>
+</package>
