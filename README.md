@@ -2,7 +2,7 @@
 
 osu!tourney setups made easier.
 
-Built on dotnet v.6.0.415\
+.NET releases are built on ARM64 dotnet v.6.0.415\
 Setup:
 
 - .NET releases (anything before v.02a) requires at least .NET 6.0
