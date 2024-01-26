@@ -13,3 +13,9 @@ Setup:
 - Sign into osu! (checking both boxes) then exit. Create a file titled `tournament.cfg`in the root of the `osu!tourney` directory. osu!tournament manager should be active upon running osu! again
 
 ![image](https://github.com/WindowsMeosu/osu-tourney-setup/assets/104236864/7e27379a-2c86-4a73-8adc-cf1afd390233)
+
+---
+
+TODO:
+
+- [ ]  Create placeholder tournament.cfg that can be created automatically if decided by the user
