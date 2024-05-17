@@ -42,6 +42,22 @@ class osucopy
     {
         string filePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\osu!tourney\osu!.exe";
         Process.Start(filePath);
+    }	
+		// reminder to myself/todo: eventually make sure this is done before opening osu!. I have no fucking idea why that isn't already the case
+        string localcat = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"osu!tourney/tournament.cfg");
+		// checks if tournament.cfg already exists otherwise don't create/overwrite.
+		if (!File.Exists(localcat))
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(localcat));
+			
+			FileStream fs = File.Create(localcat);
+			if (File.Exists(localcat))
+        {
+            Console.WriteLine("tournament config file has been created.");
+        }
+        else
+        {
+            Console.WriteLine("failed to create tournament.cfg.");
+        }
     }
-    }
-}
+}}
