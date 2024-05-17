@@ -1,0 +1,25 @@
+name: dotnet
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        dotnet-version: [ '6.0.x' ]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup
+        uses: actions/setup-dotnet@v3
+        with:
+         dotnet-version: '6.0.415'
+      
+      - name: basic stuff
+        run: |
+          dotnet --version
+          dotnet --info
+          dotnet --list-runtimes
+          
