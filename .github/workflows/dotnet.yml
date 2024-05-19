@@ -21,7 +21,7 @@ jobs:
         run: |
           echo Compilation
           echo off
-          cd %localappdata%
+          cd  C:/Users/runneradmin/AppData/Local/
           mkdir osu!
           mkdir osu!tourney
           cd osu!
