@@ -25,6 +25,7 @@ jobs:
           mkdir osu!install
           cd osu!install
           echo installing osu!
+          choco install wget
           wget http://m2.ppy.sh/r/osu!install.exe
           "osu!install.exe"
           cd ../
