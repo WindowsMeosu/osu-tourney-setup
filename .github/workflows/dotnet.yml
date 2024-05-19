@@ -19,7 +19,9 @@ jobs:
       
       - name: build
         run: |
+          echo Compilation
           cd D:/a/osu-tourney-setup/osu-tourney-setup/tourney.main/
+          whoami
           dotnet --version
           dotnet --info
           dotnet --list-runtimes
