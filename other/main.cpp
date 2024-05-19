@@ -1,4 +1,5 @@
 #include <iostream>
+#include <filesystem>
 #include <fstream>
 #include <windows.h>
 #include <shlwapi.h>
@@ -59,5 +60,36 @@ int main()
     osuExePath += "\\osu!tourney\\osu!.exe";
     ShellExecuteA(NULL, "open", osuExePath.c_str(), NULL, NULL, SW_SHOWNORMAL);
 
+    {
+        std::string localcat = std::getenv("localappdata") + std::string("\\osu!tourney\\tournament.cfg");
+
+    std::cout << "create tournament.cfg file? (y/n)" << std::endl;
+    std::string response;
+    std::cin >> response;
+
+    if (response == "y")
+    {
+        std::ifstream file(localcat);
+        if (!file)
+        {
+            std::ofstream ofs(localcat);
+            if (ofs)
+            {
+                std::cout << "tournament config file has been created." << std::endl;
+            }
+            else
+            {
+                std::cout << "failed to create tournament.cfg." << std::endl;
+            }
+        }
+    }
+    else
+    {
+        std::cout << "acknowledged, will not create tournament.cfg." << std::endl;
+    }
+
+    std::cin.ignore();
+    std::cin.get();
     return 0;
+   }
 }

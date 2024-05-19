@@ -15,4 +15,7 @@ Setup:
 NOTE: `osu.db` will sometimes corrupt itself when too many beatmaps are imported (or deleted), thus failing to import anymore beatmaps. Should this happen, check the `Songs` directory for a subdirectory titled `Failed`. You should keep note that you may not be able to recover every beatmap or beatmap necessities (audio, storyboard and/or hitsounds) from this directory alone (IIRC i'm pretty sure only zipped beatmaps, .osz and .osb are placed here. Do correct me if i'm wrong but i'm 100% sure failed imported beatmaps from their own directory will not be placed here).
 ![image](https://github.com/WindowsMeosu/osu-tourney-setup/assets/104236864/7e27379a-2c86-4a73-8adc-cf1afd390233)
 
-- [ ] ask to create tournament.cfg if it doesn't already exist instead of creating it prematurely
+## Future changes
+
+- [ ] allow users to choose or create a directory of their choice
+- [ ] tournament.cfg presets
