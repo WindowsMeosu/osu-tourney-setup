@@ -22,13 +22,14 @@ jobs:
           echo Compilation
           echo off
           cd  C:/Users/runneradmin/AppData/Local/
+          mkdir osu!
           mkdir osu!install
           cd osu!install
           echo installing osu!
-          echo choco install wget
-          echo wget http://m2.ppy.sh/r/osu!install.exe
-          echo "osu!install.exe"
-          choco install osu
+          choco install wget
+          wget http://m2.ppy.sh/r/osu!install.exe
+          ren osu!install.exe osu!.exe
+          move osu!.exe ../osu!
           cd ../
           mkdir osu!tourney
           choco install
