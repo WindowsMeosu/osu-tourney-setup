@@ -25,11 +25,13 @@ jobs:
           mkdir osu!install
           cd osu!install
           echo installing osu!
-          choco install wget
-          wget http://m2.ppy.sh/r/osu!install.exe
-          "osu!install.exe"
+          rem choco install wget
+          rem wget http://m2.ppy.sh/r/osu!install.exe
+          rem "osu!install.exe"
+          choco install osu
           cd ../
           mkdir osu!tourney
+          choco install
           cd osu!
           xcopy osu!.exe C:\Users\runneradmin\AppData\Local\osu!tourney
           mkdir mappool
