@@ -20,9 +20,28 @@ jobs:
       - name: build
         run: |
           echo Compilation
+          echo off
+          cd %localappdata%
+          mkdir osu!
+          mkdir osu!tourney
+          cd osu!
+          mkdir mappool
+          cd mappool
+          echo "test" > a.test
+          cd ../../osu!tourney
+          mkdir Songs
           cd D:/a/osu-tourney-setup/osu-tourney-setup/tourney.main/
-          whoami
           dotnet --version
           dotnet --info
           dotnet --list-runtimes
           dotnet build "osu!tourney-setup.sln" -c Release
+          dotnet build "osu!tourney-setup.csproj" -c Release --arch arm64
+          dotnet build "osu!tourney-setup.csproj" -c Release --arch x64
+          dotnet build "osu!tourney-setup.csproj" -c Release --arch arm64 --os linux
+          dotnet build "osu!tourney-setup.csproj" -c Release --arch x64 --os linux
+          dotnet run "osu!tourney-setup.sln"
+          y
+
+
+
+
