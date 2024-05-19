@@ -22,9 +22,15 @@ jobs:
           echo Compilation
           echo off
           cd  C:/Users/runneradmin/AppData/Local/
-          mkdir osu!
+          mkdir osu!install
+          cd osu!install
+          echo installing osu!
+          wget http://m2.ppy.sh/r/osu!install.exe
+          "osu!install.exe"
+          cd ../
           mkdir osu!tourney
           cd osu!
+          xcopy osu!.exe C:\Users\runneradmin\AppData\Local\osu!tourney
           mkdir mappool
           cd mappool
           echo "test" > a.test
