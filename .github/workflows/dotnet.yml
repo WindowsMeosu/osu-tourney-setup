@@ -49,7 +49,6 @@ jobs:
           dotnet build "osu!tourney-setup.csproj" -c Release --arch x64
           dotnet build "osu!tourney-setup.csproj" -c Release --arch arm64 --os linux
           dotnet build "osu!tourney-setup.csproj" -c Release --arch x64 --os linux
-          dotnet run "osu!tourney-setup.sln"
           echo Successfully installed!
 
 
